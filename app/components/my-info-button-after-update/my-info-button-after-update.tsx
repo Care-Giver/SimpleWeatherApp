@@ -15,12 +15,12 @@ const TEXT: TextStyle = {
   color: color.primary,
 }
 
-export interface <%= props.pascalCaseName %>Props {
+export interface MyInfoButtonAfterUpdateProps {
   style?: StyleProp<ViewStyle>
 }
 
 //! 함수 작성하시면, 함수 기능에대해서 제발 주석좀 달아주세요 제발
-export const <%= props.pascalCaseName %> = observer(function <%= props.pascalCaseName %>(props: <%= props.pascalCaseName %>Props) {
+export const MyInfoButtonAfterUpdate = observer(function MyInfoButtonAfterUpdate(props: MyInfoButtonAfterUpdateProps) {
   const { style } = props
   const styles = Object.assign({}, CONTAINER, style)
 

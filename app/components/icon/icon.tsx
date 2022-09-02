@@ -1,5 +1,5 @@
 import * as React from "react"
-import { View, ImageStyle } from "react-native"
+import { View, ImageStyle, Pressable } from "react-native"
 import { AutoImage as Image } from "../auto-image/auto-image"
 import { IconProps } from "./icon.props"
 import { icons } from "./icons"
@@ -9,11 +9,11 @@ const ROOT: ImageStyle = {
 }
 
 export function Icon(props: IconProps) {
-  const { style: styleOverride, icon, containerStyle } = props
+  const { style: styleOverride, icon, containerStyle, ...rest } = props
 
   return (
-    <View style={containerStyle}>
+    <Pressable style={containerStyle} {...rest}>
       <Image style={[ROOT, styleOverride]} source={icons[icon]} />
-    </View>
+    </Pressable>
   )
 }

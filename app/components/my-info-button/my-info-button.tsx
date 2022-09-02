@@ -4,7 +4,6 @@ import { observer } from "mobx-react-lite"
 import { color, typography } from "../../theme"
 import { Text } from "../text/text"
 
-//! 스타일링 할때 제발! width 먼저 쓰세요! height 는 나중에!!
 const CONTAINER: ViewStyle = {
   justifyContent: "center",
 }
@@ -15,12 +14,17 @@ const TEXT: TextStyle = {
   color: color.primary,
 }
 
-export interface <%= props.pascalCaseName %>Props {
+export interface MyInfoButtonProps {
+  /**
+   * An optional style override useful for padding & margin.
+   */
   style?: StyleProp<ViewStyle>
 }
 
-//! 함수 작성하시면, 함수 기능에대해서 제발 주석좀 달아주세요 제발
-export const <%= props.pascalCaseName %> = observer(function <%= props.pascalCaseName %>(props: <%= props.pascalCaseName %>Props) {
+/**
+ * Describe your component here
+ */
+export const MyInfoButton = observer(function MyInfoButton(props: MyInfoButtonProps) {
   const { style } = props
   const styles = Object.assign({}, CONTAINER, style)
 
