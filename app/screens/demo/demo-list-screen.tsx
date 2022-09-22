@@ -52,6 +52,8 @@ export const DemoListScreen: FC<StackScreenProps<NavigatorParamList, "demoList">
     useEffect(() => {
       async function fetchData() {
         await characterStore.getCharacters()
+        // const t = await characterStore.get
+        // console.log(t)
       }
 
       fetchData()

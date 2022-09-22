@@ -24,6 +24,7 @@ export const TodoStoreModel = types
       destroy(todo)
     },
   }))
+  .views()
 
 type TodoStoreType = Instance<typeof TodoStoreModel>
 export interface TodoStore extends TodoStoreType {}
